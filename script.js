@@ -36,35 +36,39 @@ btnNumberArray.forEach((btnNumber) => {
     })
 });
 
+let result;
+function evaluateExpression(array) {
 
+    let num1 = array[0];
+    let num2 = array[2];
+    num1 = Number(num1);
+    num2 = Number(num2);
+
+    while (array.length > 1) {
+        switch (array[1]) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+        }
+        array.splice(0, 3, result);
+    }
+    console.log(result);
+    return result = array[0];
+};
 
 const btnEquals = document.getElementById('equals');
 btnEquals.addEventListener("click", () => {
-    const displayContent = display.textContent;
-    let splitDisplayArray = displayContent.split(/[\+\-\*\/%]/);
-    console.log(splitDisplayArray);
+    displayContent = display.textContent;
+    let splitDisplayArray = displayContent.split(/(?<=[\d])(?=[\+\-\*\/%])|(?<=[\+\-\*\/%])(?=[\d])/);
+    evaluateExpression(splitDisplayArray);
+    display.textContent = result;
 });
 
 
 
-const add = function (...args) {
-};
-
-const sub = function (...args) {
-
-};
-
-const multiply = function (...args) {
-
-};
-
-const div = function (...args) {
-
-};
-
-const percent = function (...args) {
-
-};
-
-
-console.log(number);
