@@ -32,6 +32,7 @@ let number;
 const btnNumberArray = document.querySelectorAll(".number");
 btnNumberArray.forEach((btnNumber) => {
     btnNumber.addEventListener("click", () => {
+
         const btnNumberTextContent = btnNumber.textContent;
         display.textContent += btnNumberTextContent;
     })
@@ -77,6 +78,7 @@ btnEquals.addEventListener("click", () => {
     let splitDisplayArray = displayContent.split(/(?<=[\d])(?=[\+\-\*\/%])|(?<=[\+\-\*\/%])(?=[\d])/);
     evaluateExpression(splitDisplayArray);
     display.textContent = result;
+
 });
 
 

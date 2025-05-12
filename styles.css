@@ -43,7 +43,7 @@ button {
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    /* border: 0cap; */
+    border: 0cap;
     flex-shrink: 0;
     font-size: large;
     font-weight: 800;
@@ -66,4 +66,12 @@ button {
     font-weight: 800;
     font-style: normal;
     color: rgb(131, 131, 131);
+}
+
+button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+button:active {
+    background-color: black;
 }
