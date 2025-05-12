@@ -2,12 +2,21 @@
     box-sizing: border-box;
 }
 
+
+.calculator {
+    width: 400px;
+    background-color: rgb(255, 199, 87);
+    border-radius: 20px;
+    padding: 30px;
+}
+
 .display-container0 {
     border-radius: 20px;
     display: flex;
     background-color: rgb(225, 225, 225);
     height: 100px;
-    margin: 20px;
+    /* margin: 10px; */
+    padding: 10px;
 
 }
 
@@ -16,15 +25,19 @@
     height: 60px;
     margin: 20px;
     padding: 5px;
+    gap: 30px;
 }
 
 .row {
     display: flex;
+    gap: 30px;
     flex-direction: row;
     justify-content: space-between;
-
+    flex: 0;
     align-content: stretch;
 }
+
+
 
 button {
     height: 50px;
@@ -47,8 +60,10 @@ button {
     color: black;
     text-align: right;
     text-decoration: none;
-    /* usuwa podkreślenie linku */
-    border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 30px;
+    font-weight: 800;
+    font-style: normal;
+    color: rgb(131, 131, 131);
 }
